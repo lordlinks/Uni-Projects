@@ -11,7 +11,7 @@ namespace Hex_Calc
     {
         public int Number = 1;
         public string out10 = "a";
-        public string out2 = "b";
+        public string out2 = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -41,8 +41,9 @@ namespace Hex_Calc
             {
                 Number = intFirst + intSecond;
             }
-            baseTen();
             baseTwo();
+            baseTen();
+            
         }
 
         protected void baseTen()
@@ -60,11 +61,14 @@ namespace Hex_Calc
 
         protected void countbtn(object sender, EventArgs e)
         {
-            string test = out2;
-            int c0 = test.Split('0').Length - 1;
-            int c1 = test.Split('1').Length - 1;
-            count0.Value = c0.ToString();
-            count1.Value = c1.ToString();
+            int c0 = out2.Split('0').Length - 1;
+            int c1 = out2.Split('1').Length - 1;
+            string cs0 = "";
+            string cs1 = "";            
+            cs0 = c0.ToString();
+            cs1 = c1.ToString();
+            count0.Value = cs0;
+            count1.Value = cs1;
         }
     }
 }
