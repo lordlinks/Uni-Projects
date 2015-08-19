@@ -60,7 +60,7 @@ namespace Hex_Calc
 
         protected void countbtn(object sender, EventArgs e)
         {
-            string test = out2;
+            string test = base2.Value;
             int c0 = test.Split('0').Length - 1;
             int c1 = test.Split('1').Length - 1;
             count0.Value = c0.ToString();
