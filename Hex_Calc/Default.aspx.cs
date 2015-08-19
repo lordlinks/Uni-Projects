@@ -10,6 +10,8 @@ namespace Hex_Calc
     public partial class _Default : Page
     {
         public int Number = 1;
+        public string out10 = "a";
+        public string out2 = "b";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,34 +25,46 @@ namespace Hex_Calc
             int intFirst = Convert.ToInt16(First);
             int intSecond = Convert.ToInt16(Second);
             int intOp = Convert.ToInt16(Operator);
-            int out2 = 0;
-            int out10 = 0;
             if (intOp == 4)
             {
-                out10 = intFirst * intSecond;
-                Number = out10;
+                Number = intFirst * intSecond;
             }
             else if (intOp == 3)
             {
-                out10 = intFirst / intSecond;
-                Number = out10;
+                Number = intFirst / intSecond;
             }
             else if (intOp == 2)
             {
-                out10 = intFirst - intSecond;
-                Number = out10;
+                Number = intFirst - intSecond;
             }
             else if (intOp == 1)
             {
-                out10 = intFirst + intSecond;
-                Number = out10;
+                Number = intFirst + intSecond;
             }
-
+            baseTen();
+            baseTwo();
         }
 
-        protected Int16 BaseTwo(Int16 Number)
+        protected void baseTen()
         {
-            
+            string strOut = Number.ToString();
+            out10 = strOut;
+            base10.Value = out10;
+        }
+
+        protected void baseTwo()
+        {
+            out2 = Convert.ToString(Number, 2);
+            base2.Value = out2;
+        }
+
+        protected void countbtn(object sender, EventArgs e)
+        {
+            string test = out2;
+            int c0 = test.Split('0').Length - 1;
+            int c1 = test.Split('1').Length - 1;
+            count0.Value = c0.ToString();
+            count1.Value = c1.ToString();
         }
     }
 }

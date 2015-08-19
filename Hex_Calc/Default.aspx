@@ -31,7 +31,7 @@
             <input type="text" id="count0" class="form-control" runat="server"/>
             <label for="count1">Ones</label>
             <input type="text" id="count1" class="form-control" runat="server"/>
-            <button id="btn2" type="button" class="btn btn-primary" runat="server">Count</button>
+            <button id="btn2" type="button" class="btn btn-primary" runat="server" onserverclick="countbtn">Count</button>
         </div>
     </div>
 
