@@ -84,8 +84,92 @@ namespace Prac2
             string days = user3.Value;
             try
             {
-                maino += Convert.ToInt16(months);
+                int m1= Convert.ToInt16(months)*100;
+                int m2= Convert.ToInt16(days);
+                if (m1 >= 100 && m1 <= 1200)
+                {
+                    maino += m1;
+                    if (m2 >= 1 && m2 <= 31)
+                    {
+                        maino += m2;
+                        checker(maino);
+                    }
+                    else
+                    {
+                        up2("Bad Input");
+                    }
+                }
+                else
+                {
+                    up2("Bad Input");
+                }
             }
+            catch (System.FormatException)
+            {
+                up2("Bad Input");
+            }
+        }
+
+        protected void checker(int num)
+        {
+            int maino = num;
+            if (maino < 122)
+            {
+                up2("Aquarius");
+            }
+            else if (maino < 221)
+            {
+                up2("Pisces");
+            }
+            else if (maino < 322)
+            {
+                up2("Aries");
+            }
+            else if (maino < 422)
+            {
+                up2("Taurus");
+            }
+            else if (maino < 523)
+            {
+                up2("Gemini");
+            }
+            else if (maino < 623)
+            {
+                up2("Cancer");
+            }
+            else if (maino < 724)
+            {
+                up2("Leo");
+            }
+            else if (maino < 824)
+            {
+                up2("Virgo");
+            }
+            else if (maino < 925)
+            {
+                up2("Libra");
+            }
+            else if (maino < 1025)
+            {
+                up2("Scorpio");
+            }
+            else if (maino < 1124)
+            {
+                up2("Sagittarius");
+            }
+            else if (maino < 1223)
+            {
+                up2("Capricorn");
+            }
+            else
+            {
+                up2("ERROR");
+            }
+        }
+
+        protected void up2(string inthat)
+        {
+            out2.Value = inthat;
         }
     }
 }

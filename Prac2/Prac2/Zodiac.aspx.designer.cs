@@ -76,12 +76,12 @@ namespace Prac2 {
         protected global::System.Web.UI.HtmlControls.HtmlButton btn2;
         
         /// <summary>
-        /// user4 control.
+        /// out2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText user4;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText out2;
     }
 }

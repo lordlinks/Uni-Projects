@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Zodiac</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -24,8 +24,8 @@
         <label for="user3">Day :</label>
         <input id="user3" runat="server" />
         <button id="btn2" type="button" runat="server" onserverclick="zod2">Get Name</button>
-        <label for="user4">Name :</label>
-        <input id="user4" runat="server" />
+        <label for="out2">Name :</label>
+        <input id="out2" runat="server" />
     </div>
     </form>
 </body>
